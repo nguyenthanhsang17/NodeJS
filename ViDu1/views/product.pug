@@ -1,0 +1,28 @@
+extends layouts/default.pug
+
+block main 
+    table(style='border: 1px solid #ddd; border-collapse: collapse; width: 100%;')
+        thead 
+            tr 
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') Title
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') description
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') category
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') price
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') discountPercentage
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') rating
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') stock
+                td(style='padding: 10px; background-color: #f2f2f2; text-align: left;') thumbnail 
+        tbody 
+            each item in product
+                tr 
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.title}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.description} 
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.category}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.price}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.discountPercentage}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.rating}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') #{item.stock}
+                    td(style='padding: 8px; text-align: left; border-top: 1px solid #ddd;') 
+                        img(src= item.thumbnail, alt="anh cuar sang", style="width: 100px; height: auto;") 
+
+
